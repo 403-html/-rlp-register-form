@@ -1,0 +1,92 @@
+$background-1: #3372b3;
+$background-2: #3775b7;
+$front: #ffffff;
+$gradient-1: #399dd9;
+$gradient-2: #2768b0;
+$font-color: #333333;
+$dim: #aaaaaa;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $font-color;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.App {
+  display: grid;
+  min-height: 100vh;
+  background: linear-gradient(90deg, $background-1, $background-2);
+}
+
+.box {
+  justify-self: center;
+  align-self: center;
+  width: 500px;
+  height: 700px;
+  background: $front;
+  padding: 120px 30px 50px 30px;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid $gradient-1;
+  font-weight: bold;
+  cursor: default;
+  &--active {
+    color: $front;
+    background: $gradient-1;
+  }
+}
+
+.progress-divider {
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  background: $dim;
+  &--active {
+    background: $gradient-1;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 25px;
+  border: 0;
+  &:disabled {
+    background: gainsboro;
+    color: $font-color + 100;
+  }
+  &--add {
+    background: greenyellow;
+  }
+  &--sub {
+    background: palevioletred;
+  }
+}
