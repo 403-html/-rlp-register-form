@@ -35,40 +35,42 @@ code {
   justify-self: center;
   align-self: center;
   width: 500px;
-  height: 700px;
   background: $front;
-  padding: 120px 30px 50px 30px;
+  padding: 80px 30px 50px 30px;
+  overflow: auto;
 }
 
 .progress {
   display: flex;
-  align-items: center;
   justify-content: center;
-}
 
-.progress-text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 2px solid $gradient-1;
-  font-weight: bold;
-  cursor: default;
-  &--active {
-    color: $front;
-    background: $gradient-1;
-  }
-}
-
-.progress-divider {
-  display: inline-block;
-  width: 30px;
-  height: 3px;
-  background: $dim;
-  &--active {
-    background: $gradient-1;
+  .progress-step {
+    display: inline-flex;
+    align-items: center;
+    &__text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 2px solid $gradient-1;
+      font-weight: bold;
+      cursor: default;
+      &--active {
+        color: $front;
+        background: $gradient-1;
+      }
+    }
+    &__divider {
+      display: inline-block;
+      width: 30px;
+      height: 3px;
+      background: $dim;
+      &--active {
+        background: $gradient-1;
+      }
+    }
   }
 }
 
